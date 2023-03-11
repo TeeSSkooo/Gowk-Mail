@@ -22,3 +22,7 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+[class*='-container'] {
+  @apply max-w-[830px] mx-auto px-[15px];
+}

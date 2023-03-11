@@ -1,0 +1,19 @@
+.modal {
+  @apply absolute
+         top-[-100%]
+         left-1/2
+         z-20
+         min-w-[400px]
+         min-h-[300px]
+         flex
+         flex-col
+         justify-around
+         rounded-[7px]
+         shadow-lg
+         p-[20px]
+         bg-white
+         translate-x-[-50%]
+         translate-y-[-50%]
+         transition-all
+         duration-300;
+}
