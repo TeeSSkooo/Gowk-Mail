@@ -7,7 +7,7 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './components/app/App';
 
 import store, { persistor } from 'store';
-import './firebase';
+import './firebaseApp';
 
 import './index.css';
 

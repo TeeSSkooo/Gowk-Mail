@@ -1,0 +1,23 @@
+.chatField {
+  @apply mb-[30px]
+         w-full
+         h-[750px]
+         p-[20px] 
+         rounded-[7px] 
+         shadow-lg border 
+         border-[#fff] 
+         overflow-auto 
+         overflow-x-hidden;
+}
+
+.input {
+  @apply flex-auto 
+         min-h-[50px] 
+         px-[15px] 
+         rounded-[7px] 
+         overflow-hidden 
+         text-white 
+         bg-[#2196f3] 
+         placeholder:text-[#ccc] 
+         focus:outline-none;
+}
