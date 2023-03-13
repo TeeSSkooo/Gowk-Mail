@@ -12,10 +12,8 @@
   box-sizing: border-box;
 }
 
-html,
-#root,
-#root > div {
-  @apply h-full;
+html {
+  height: 100%;
 }
 
 body {

@@ -5,7 +5,6 @@
          rounded-[7px] 
          overflow-hidden 
          text-white 
-         bg-[#1565c0] 
          placeholder:text-[#ccc] 
          focus:outline-none;
 }

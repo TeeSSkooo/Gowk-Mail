@@ -13,8 +13,8 @@ const ChatRoom: React.FC = () => {
   const [messages] = useCollectionData(loadQuery);
 
   return (
-    <div className="h-full py-[30px]">
-      <div className="chat-container h-full flex flex-col justify-between">
+    <div className="py-[30px]">
+      <div className="chat-container h-screen flex flex-col justify-between">
         <div className={styles.chatField}>
           {messages?.map((message) => (
             <MessageItem

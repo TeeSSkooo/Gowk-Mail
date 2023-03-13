@@ -1,19 +1,18 @@
 import { useState } from 'react';
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
-import useSound from 'use-sound';
 
 import useAuth from 'hooks/useAuth';
+import useTheme from 'hooks/useTheme';
 import database from 'firebaseApp';
 
 import send from 'assets/send.svg';
-import notification from 'sounds/notification.mp3';
 
 import styles from './MessageForm.module.css';
 
 const MessageForm: React.FC = () => {
   const [message, setMessage] = useState<string>('');
-  const [play] = useSound(notification);
   const { user } = useAuth();
+  const { theme } = useTheme();
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setMessage(event.currentTarget.value);
@@ -32,16 +31,12 @@ const MessageForm: React.FC = () => {
         text: message,
         createdAt: serverTimestamp(),
       });
-
-      play();
     } catch (error) {
       console.log(error);
     } finally {
       setMessage('');
     }
   };
-
-  console.log(useSound(notification, { volume: 0.5 }));
 
   return (
     <form className="flex items-end gap-[10px] sm:gap-[20px]" onSubmit={sendMessage}>
@@ -51,8 +46,12 @@ const MessageForm: React.FC = () => {
         placeholder="Type your message..."
         value={message}
         onChange={handleChange}
+        style={{ backgroundColor: `${theme === 'light' ? '#085fc2' : '#4c428c'}` }}
       />
-      <button className="w-[50px] h-[50px] rounded-[50%] grid place-items-center bg-[#1565c0] transition-all hover:bg-[#5ab1f8]">
+      <button
+        className="w-[50px] h-[50px] rounded-[50%] grid place-items-center"
+        style={{ backgroundColor: `${theme === 'light' ? '#085fc2' : '#4c428c'}` }}
+      >
         <img src={send} alt="Send" />
       </button>
     </form>

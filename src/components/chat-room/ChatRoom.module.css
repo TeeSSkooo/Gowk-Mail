@@ -8,6 +8,6 @@
          border-[#fff] 
          overflow-auto 
          overflow-x-hidden
-         bg-[url('assets/meteor.svg')]
+         bg-[url('assets/chat-bg.svg')]
          bg-repeat;
 }

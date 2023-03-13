@@ -1,14 +1,19 @@
 import { Link } from 'react-router-dom';
 
 import useAuth from 'hooks/useAuth';
+import useTheme from 'hooks/useTheme';
 
 const ProfilePage: React.FC = () => {
   const { user } = useAuth();
+  const { theme } = useTheme();
 
   return (
     <div className="h-full py-[30px]">
       <div className="profile-container text-white">
-        <div className="flex flex-col items-center gap-[30px] py-[30px] px-[15px] rounded-[7px] bg-[#1565c0] sm:flex-row sm:items-start">
+        <div
+          className="flex flex-col items-center gap-[30px] py-[30px] px-[15px] rounded-[7px] sm:flex-row sm:items-start"
+          style={{ backgroundColor: `${theme === 'light' ? '#085fc2' : '#4c428c'}` }}
+        >
           <div>
             <img className="max-w-full rounded-[50%]" src={user?.photoURL!} alt="Avatar" />
           </div>

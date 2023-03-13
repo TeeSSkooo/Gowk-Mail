@@ -1,11 +1,13 @@
 .messageText {
   @apply relative
          p-[10px] 
-         max-w-[400px]
+         max-w-[190px]
          min-h-[40px]  
          rounded-[7px] 
          break-words 
-         text-white;
+         text-white
+         min-[400px]:max-w-[250px]
+         min-[530px]:max-w-[400px];
 }
 
 .decoration {
