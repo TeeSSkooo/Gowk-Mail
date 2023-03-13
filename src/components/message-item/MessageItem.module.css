@@ -1,0 +1,20 @@
+.messageText {
+  @apply relative
+         p-[10px] 
+         max-w-[400px]
+         min-h-[40px]  
+         rounded-[7px] 
+         break-words 
+         text-white;
+}
+
+.decoration {
+  position: absolute;
+  bottom: 0;
+  right: -10px;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-right-width: 10px;
+  border-left-width: 10px;
+}

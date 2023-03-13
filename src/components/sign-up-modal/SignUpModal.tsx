@@ -42,7 +42,7 @@ const SignUpModal: React.FC = () => {
           className="relative block p-[15px] w-full rounded-[7px] bg-[#4285f4] transition-all hover:bg-[#4286f4d7]"
           onClick={signUp}
         >
-          <div className="absolute top-1/2 left-[15px] inline-block p-[5px] rounded-[7px] bg-white translate-y-[-50%]">
+          <div className="hidden absolute top-1/2 left-[15px] p-[5px] rounded-[7px] bg-white translate-y-[-50%] min-[400px]:inline-block">
             <img src={google} alt="Google" />
           </div>
           <div className="text-white text-center">Sign up with Google</div>

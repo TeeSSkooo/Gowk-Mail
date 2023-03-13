@@ -1,5 +1,5 @@
 import { signOut } from 'firebase/auth';
-import { NavLink, Link, useNavigate } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 import useAppDispatch from 'hooks/useAppDispatch';
 import useAuth from 'hooks/useAuth';
@@ -9,21 +9,17 @@ import profile from 'assets/profile.svg';
 
 const Header: React.FC = () => {
   const { isAuth, auth } = useAuth();
-  const navigate = useNavigate();
   const dispatch = useAppDispatch();
 
   const showModal = () => dispatch(openModal());
 
-  const logOut = () => {
-    signOut(auth);
-    navigate('/');
-  };
+  const logOut = () => signOut(auth);
 
   return (
-    <header className="text-white bg-[#2196f3]">
+    <header className="text-white bg-[#1565c0]">
       <div className="header-container min-h-[70px] flex justify-between items-center">
-        <Link className="text-3xl font-bold" to="/">
-          Online<span className="text-[#1565c0]">Chat</span>
+        <Link className="text-2xl font-bold sm:text-3xl" to="/">
+          Gowk<span className="text-[#2da4f3]">Mail</span>
         </Link>
         <div>
           {isAuth ? (

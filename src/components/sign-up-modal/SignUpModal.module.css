@@ -3,8 +3,8 @@
          top-[-100%]
          left-1/2
          z-20
-         min-w-[400px]
-         min-h-[300px]
+         min-w-[250px]
+         min-h-[250px]
          flex
          flex-col
          justify-around
@@ -15,5 +15,7 @@
          translate-x-[-50%]
          translate-y-[-50%]
          transition-all
-         duration-300;
+         duration-300
+         min-[400px]:min-w-[350px]
+         min-[400px]:min-h-[350px];
 }
