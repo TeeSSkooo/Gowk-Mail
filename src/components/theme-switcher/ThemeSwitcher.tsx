@@ -8,7 +8,10 @@ const ThemeSwitcher: React.FC = () => {
   const changeTheme = () => dispatch(setTheme(theme === 'light' ? 'dark' : 'light'));
 
   return (
-    <button className="relative pr-[25px] border-r text-lg font-semibold" onClick={changeTheme}>
+    <button
+      className="pr-[10px] relative border-r text-base font-semibold sm:pr-[25px] sm:text-lg"
+      onClick={changeTheme}
+    >
       {theme}
     </button>
   );
