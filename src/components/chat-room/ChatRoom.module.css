@@ -4,8 +4,8 @@
          w-full
          p-[20px] 
          rounded-[7px] 
-         shadow-lg border 
-         border-[#fff] 
+         shadow-lg 
+         border  
          overflow-auto 
          overflow-x-hidden
          bg-[url('assets/chat-bg.svg')]
