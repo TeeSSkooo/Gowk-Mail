@@ -17,7 +17,7 @@ const ChatRoom: React.FC = () => {
 
   return (
     <div className="py-[30px]">
-      <div className="chat-container h-screen flex flex-col justify-between">
+      <div className="chat-container h-[85vh] flex flex-col justify-between">
         <div className={styles.chatField} style={{ borderColor: `${theme === 'light' ? '#000' : '#fff'}` }}>
           {messages?.map((message) => (
             <MessageItem

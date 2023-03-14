@@ -1,5 +1,5 @@
 import { signOut } from 'firebase/auth';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link, useNavigate } from 'react-router-dom';
 
 import ThemeSwitcher from 'components/theme-switcher/ThemeSwitcher';
 
@@ -14,16 +14,17 @@ const Header: React.FC = () => {
   const { isAuth, auth } = useAuth();
   const { theme } = useTheme();
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
 
   const showModal = () => dispatch(openModal());
 
-  const logOut = () => signOut(auth);
+  const logOut = () => {
+    signOut(auth);
+    navigate('/');
+  };
 
   return (
-    <header
-      className="text-white bg-[#085fc2]"
-      style={{ backgroundColor: `${theme === 'light' ? '#085fc2' : '#4c428c'}` }}
-    >
+    <header className="text-white" style={{ backgroundColor: `${theme === 'light' ? '#085fc2' : '#4c428c'}` }}>
       <div className="header-container min-h-[70px] flex justify-between items-center">
         <Link className="text-xl font-bold min-[400px]:text-3xl" to="/">
           Gowk
